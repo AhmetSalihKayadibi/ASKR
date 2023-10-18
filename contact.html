@@ -1,115 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Doe - Resume</title>
-    <link rel="stylesheet" href="css/style.css">
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-  </head>
-  <body>
-    <!-- PAGE HEADER -->
-    <div class="header">
-      <div class="title">
-        <span></span>
-        <h2>John Doe</h2>
-        <i>Web Developer</i>
-      </div>
+:root {
+  --color1: rgb(40, 30, 24);
+  --color2: rgb(27, 171, 207);
+  --color3: rgb(233, 133, 11);
+  --color4: rgb(16, 18, 20);
+}
 
-      <div class="menu">
-        <a href="index.html">Home</a> | <a href="resume.html">Resume</a> |
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-    <!-- PAGE HEADER -->
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  font-size: 20px;
+}
 
+a {
+  text-decoration: none;
+}
 
-    <!-- PAGE CONTENT -->
-    <div class="content">
-      <h1><span></span> Contact</h1>
+input,
+textarea {
+  border: 1px solid var(--color1);
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  font-size: 20px;
+}
 
-      <div class="section">
-        <div class="card">
-          <div class="left">
-            <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-            <!-- if you want to receive the emails sended by the following form and includes visitor's information, please replace john@due.com email address with yours -->
-            <!-- 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇 -->
-            <form action="https://formsubmit.co/john@due.com" method="POST" target="_blank">
-              <div class="form-row">
-                <div>
-                  <label for="firstName">First Name</label>
-                </div>
-                <input type="text" name="firstName" id="firstName" />
-              </div>
+button {
+  border: 1px solid var(--color1);
+  border-radius: 10px;
+  padding: 10px 30px;
+  background-color: var(--color2);
+  color: white;
+  font-size: 25px;
+}
 
-              <div class="form-row">
-                <div>
-                  <label for="lastName">Last Name</label>
-                </div>
-                <input type="text" name="lastName" id="lastName" />
-              </div>
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color2);
+  padding: 10px 30px;
+  border-radius: 60px;
+}
 
-              <div class="form-row">
-                <div>
-                  <label for="email">Email</label>
-                </div>
-                <input type="text" name="email" id="email" />
-              </div>
+.header .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-              <div class="form-row">
-                <div>
-                  <label for="phone">Phone</label>
-                </div>
-                <input type="text" name="phone" id="phone" />
-              </div>
+.header .menu a {
+  font-weight: 600;
+  color: black;
+}
 
-              <div class="form-row">
-                <div>
-                  <label for="message">Message</label>
-                </div>
-                
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+.content h1 span,
+.header span {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--color4);
+}
 
-              </div>
+.content h1 {
+  display: flex;
+}
 
-              <button type="submit">SEND</button>
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+}
 
+.content .about {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
 
+.content .about img {
+  width: 500px;
+  height: 500px;
+  border-radius: 250px;
+  border: 15px solid var(--color3);
+}
 
+.content .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
 
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- PAGE CONTENT -->
+.content .toolbar {
+  display: flex;
+  gap: 20px;
+}
 
+.content .toolbar a {
+  background-color: var(--color3);
+  width: 200px;
+  height: 100px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  box-shadow: 3px 3px 8px var(--color4);
+}
 
+.section {
+  width: 60%;
+}
 
-    <!-- PAGE FOOTER -->
-    <div class="footer">
-      <div>
-        <h3>Phone</h3>
-        <p>+1 555 555 55 55</p>
-      </div>
+.section .card {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color3);
+  border-radius: 20px;
+  padding: 50px;
+  margin-bottom: 50px;
+  gap: 40px;
+  box-shadow: 3px 3px 8px var(--color4);
+}
 
-      <div>
-        <h3>Email</h3>
-        <p>john@doe.com</p>
-      </div>
+.section .card h2 {
+  color: var(--color1);
+}
 
-      <div>
-        <h3>Follow Me</h3>
-        <p>Linkedin | Twitter</p>
-      </div>
+.section .card .left {
+  flex: 3;
+}
 
-      <div>
-        <h3>Copyright</h3>
-        <p>2022 - John Doe</p>
-      </div>
-    </div>
-    <!-- PAGE FOOTER -->
-  </body>
-</html>
+.section .card .right {
+  flex: 2;
+}
+
+.section .form-row {
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px dotted gray;
+}
