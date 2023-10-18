@@ -2,9 +2,9 @@
 
 :root {
   --color1: rgb(40, 30, 24);
-  --color2: rgb(207, 39, 27);
+  --color2: rgb(27, 171, 207);
   --color3: rgb(233, 133, 11);
-  --color4: rgb(40, 30, 24);
+  --color4: rgb(16, 18, 20);
 }
 
 * {
@@ -105,7 +105,7 @@ button {
 
 .content .toolbar a {
   background-color: var(--color3);
-  width: 100px;
+  width: 200px;
   height: 100px;
   border-radius: 50px;
   display: flex;
